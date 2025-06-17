@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color changer...</title>
+    <style>
+        body{
+            background-color: #212121;
+            color: #fff;
+        }
+        #box1{
+            width: 80px;
+            height: 80px;
+            background-color: grey;
+        }
+        #box2{
+            width: 80px;
+            height: 80px;
+            background-color: blue;
+        }
+        #box3{
+            width: 80px;
+            height: 80px;
+            background-color: #fff;
+        }
+    #box4{
+            width: 80px;
+            height: 80px;
+            background-color: yellow;
+        }
+            #box5{
+            width: 80px;
+            height: 80px;
+            background-color: #fff;
+        }
+        .boxes{
+            display: flex;
+            justify-content: space-between;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Color Changer Project...</h1>
+    <div class="boxes">
+    <div id="box1" class = "color-boxes"></div>
+    <div id="box2" class = "color-boxes"></div>
+    <div id="box3" class = "color-boxes"></div>
+    <div id="box4" class = "color-boxes"></div>
+    <div id="box5" class = "color-boxes"></div>
+
+    </div>
+</body>
+<script>
+    const boxes = document.querySelectorAll('.color-boxes')
+    const body = document.querySelector('body');
+
+    boxes.forEach(function (item) {
+        item.addEventListener('click',function(e){
+            if(e.target.id == 'box1'){
+                body.style.backgroundColor = "grey"
+            }
+            if(e.target.id == 'box2'){
+                body.style.backgroundColor = "blue"
+            }
+            if(e.target.id == 'box3'){
+                body.style.backgroundColor = "white"
+            }
+            if(e.target.id == 'box4'){
+                body.style.backgroundColor = "yellow"
+            }
+            if(e.target.id == 'box5'){
+                body.style.backgroundColor = "orange"
+            }
+        });
+    });
+
+</script>
+</html>
